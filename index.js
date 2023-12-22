@@ -1,3 +1,4 @@
+
 const {
   default: makeWASocket,
   Browsers,
@@ -5,7 +6,7 @@ const {
   useMultiFileAuthState,
 } = require("@whiskeysockets/baileys");
 const path = require("path");
-const { Image, Message, Sticker, Video } = require("./lib/Messages");
+const { Image, Message, Sticker, Video } = require("./lib/base");
 let fs = require("fs");
 let config = require("./config");
 const pino = require("pino");
