@@ -1,7 +1,8 @@
 const {
   default: makeWASocket,
-  useMultiFileAuthState,
   Browsers,
+  makeInMemoryStore,
+  useMultiFileAuthState,
 } = require("@whiskeysockets/baileys");
 const path = require("path");
 const { Image, Message, Sticker, Video } = require("./lib/base");
@@ -18,21 +19,43 @@ fs.readdirSync(__dirname + "/lib/database/").forEach((plugin) => {
     require(__dirname + "/lib/database/" + plugin);
   }
 });
+const store = makeInMemoryStore({
+  logger: pino().child({ level: "silent", stream: "store" }),
+});
 
-const Jsl_0x5102ac=Jsl_0x7a72;(function(_0x1b4fe2,_0x291a54){const _0x3fa4f0=Jsl_0x7a72,_0x50bda7=_0x1b4fe2();while(!![]){try{const _0x2e31fe=-parseInt(_0x3fa4f0(0x144))/0x1+parseInt(_0x3fa4f0(0x15b))/0x2*(-parseInt(_0x3fa4f0(0x153))/0x3)+-parseInt(_0x3fa4f0(0x15a))/0x4+-parseInt(_0x3fa4f0(0x15c))/0x5+-parseInt(_0x3fa4f0(0x149))/0x6+parseInt(_0x3fa4f0(0x152))/0x7*(parseInt(_0x3fa4f0(0x143))/0x8)+parseInt(_0x3fa4f0(0x147))/0x9;if(_0x2e31fe===_0x291a54)break;else _0x50bda7['push'](_0x50bda7['shift']());}catch(_0x244412){_0x50bda7['push'](_0x50bda7['shift']());}}}(Jsl_0x15bf,0xc61c0));function Jsl_0x15bf(){const _0x549b27=['split','axios','21835854QCzsnl','log','963894bCWlkd','./auth_info_baileys','replace','SESSION_ID','files','writeFileSync','please\x20provide\x20a\x20session\x20id\x20in\x20config.js\x0a\x0ascan\x20from\x20inrl\x20server','content','exit','28ZnpgXJ','12327dXpTvd','length','existsSync','./auth_info_baileys/creds.json','jsl~','map','replaceAll','5995684PrlYSp','386YzyCrt','154555LdLJqp','2097808csVHnw','180136rdPTyn'];Jsl_0x15bf=function(){return _0x549b27;};return Jsl_0x15bf();}function Jsl_0x7a72(_0x3333fc,_0x48e14f){const _0x15bff7=Jsl_0x15bf();return Jsl_0x7a72=function(_0x7a72e3,_0x47a790){_0x7a72e3=_0x7a72e3-0x143;let _0x9a6a1=_0x15bff7[_0x7a72e3];return _0x9a6a1;},Jsl_0x7a72(_0x3333fc,_0x48e14f);}function decrypt(_0x280ca3){const _0x26bdab=Jsl_0x7a72;let _0x2023cc=_0x280ca3[_0x26bdab(0x145)](''),_0x35c7fd='',_0x4e81b0='',_0xdea041='',_0x583606;return _0x2023cc[_0x26bdab(0x158)](_0xa068e=>{const _0x3b46ba=_0x26bdab;_0x35c7fd['length']<0x5?_0x35c7fd+=_0xa068e:_0x4e81b0=_0x280ca3['replace'](_0x35c7fd,'');let _0x2570d6=_0x4e81b0['split']('');_0x2570d6[_0x3b46ba(0x158)](_0xa4ac2f=>{const _0x1784ca=_0x3b46ba;_0xdea041[_0x1784ca(0x154)]<0x4&&(_0xdea041+=_0xa4ac2f);});}),_0x583606=_0x35c7fd+_0x280ca3[_0x26bdab(0x14b)](_0x35c7fd,'')[_0x26bdab(0x14b)](_0xdea041,''),_0x583606;}let plaintext=config[Jsl_0x5102ac(0x14c)][Jsl_0x5102ac(0x159)](Jsl_0x5102ac(0x157),''),session=decrypt(plaintext);const axios=require(Jsl_0x5102ac(0x146));async function connect(_0x1b8ec8){const _0x666830=Jsl_0x5102ac;!_0x1b8ec8&&(console[_0x666830(0x148)](_0x666830(0x14f)),process[_0x666830(0x151)](0x1));if(!fs[_0x666830(0x155)](_0x666830(0x14a))){}let _0x58bae2='https://api.github.com/gists/'+_0x1b8ec8,{data:_0x6d03c8}=await axios(_0x58bae2),_0x29ab40=_0x6d03c8[_0x666830(0x14d)]['test'][_0x666830(0x150)];fs[_0x666830(0x14e)](_0x666830(0x156),_0x29ab40);}connect(session);
-
-async function Abu() {
-  const { state, saveCreds } = await useMultiFileAuthState("./auth_info_baileys/", pino({
-    'level': "silent"
-  }));
+function Jsl_0x173c(){const _0x3db71e=['split','./lib/auth_info_baileys','4566930qQbKGt','SESSION_ID','1073079QlHbzb','log','1140168kWjVpJ','2914428DlLAII','replaceAll','existsSync','map','content','length','./lib/auth_info_baileys/creds.json','files','6278tkCPQb','writeFileSync','test','45RTJiaG','5cPHKJy','18809240ycCqFf','223LKyLgc','replace','673971PFEtYM','axios','jsl~'];Jsl_0x173c=function(){return _0x3db71e;};return Jsl_0x173c();}const Jsl_0x58e219=Jsl_0x1bc7;(function(_0x47abe1,_0x29b084){const _0x1dc3fe=Jsl_0x1bc7,_0x5cfd20=_0x47abe1();while(!![]){try{const _0x587475=-parseInt(_0x1dc3fe(0xf9))/0x1*(parseInt(_0x1dc3fe(0xf3))/0x2)+-parseInt(_0x1dc3fe(0xfb))/0x3+-parseInt(_0x1dc3fe(0xeb))/0x4+parseInt(_0x1dc3fe(0xf7))/0x5*(parseInt(_0x1dc3fe(0x100))/0x6)+parseInt(_0x1dc3fe(0xe8))/0x7+parseInt(_0x1dc3fe(0xea))/0x8*(-parseInt(_0x1dc3fe(0xf6))/0x9)+parseInt(_0x1dc3fe(0xf8))/0xa;if(_0x587475===_0x29b084)break;else _0x5cfd20['push'](_0x5cfd20['shift']());}catch(_0x46f74f){_0x5cfd20['push'](_0x5cfd20['shift']());}}}(Jsl_0x173c,0x68dc6));function decrypt(_0xc2ecf3){const _0x434401=Jsl_0x1bc7;let _0x27ee45=_0xc2ecf3['split'](''),_0x4570dc='',_0x5078e0='',_0x3fdd69='',_0x49cfee;return _0x27ee45[_0x434401(0xee)](_0x5dbaef=>{const _0x29b255=_0x434401;_0x4570dc['length']<0x5?_0x4570dc+=_0x5dbaef:_0x5078e0=_0xc2ecf3['replace'](_0x4570dc,'');let _0x98a596=_0x5078e0[_0x29b255(0xfe)]('');_0x98a596[_0x29b255(0xee)](_0x29d1f7=>{const _0x162c16=_0x29b255;_0x3fdd69[_0x162c16(0xf0)]<0x4&&(_0x3fdd69+=_0x29d1f7);});}),_0x49cfee=_0x4570dc+_0xc2ecf3[_0x434401(0xfa)](_0x4570dc,'')['replace'](_0x3fdd69,''),_0x49cfee;}let plaintext=config[Jsl_0x58e219(0x101)][Jsl_0x58e219(0xec)](Jsl_0x58e219(0xfd),''),session=decrypt(plaintext);function Jsl_0x1bc7(_0x38dfa7,_0x468e94){const _0x173cb2=Jsl_0x173c();return Jsl_0x1bc7=function(_0x1bc7e3,_0x2dba24){_0x1bc7e3=_0x1bc7e3-0xe8;let _0x249ba2=_0x173cb2[_0x1bc7e3];return _0x249ba2;},Jsl_0x1bc7(_0x38dfa7,_0x468e94);}const axios=require(Jsl_0x58e219(0xfc));async function connect(_0x4343d5){const _0x1d8ccd=Jsl_0x58e219;!_0x4343d5&&(console[_0x1d8ccd(0xe9)]('please\x20provide\x20a\x20session\x20id\x20in\x20config.js\x0a\x0ascan\x20from\x20Jsl\x20server'),process['exit'](0x1));if(!fs[_0x1d8ccd(0xed)](_0x1d8ccd(0xff))){}let _0x5a0fb0='https://api.github.com/gists/'+_0x4343d5,{data:_0x3db9e9}=await axios(_0x5a0fb0),_0x1113e7=_0x3db9e9[_0x1d8ccd(0xf2)][_0x1d8ccd(0xf5)][_0x1d8ccd(0xef)];fs[_0x1d8ccd(0xf4)](_0x1d8ccd(0xf1),_0x1113e7);}connect(session);
+fs.readdirSync(__dirname + "/plugins/").forEach((plugin) => {
+  if (path.extname(plugin).toLowerCase() == ".js") {
+    require(__dirname + "/plugins/" + plugin);
+  }
+});
+async function Alexa() {
+  const { state, saveCreds } = await useMultiFileAuthState(
+    "./lib/auth_info_baileys/",
+    pino({ level: "silent" })
+  )
+  await config.DATABASE.sync();
   let conn = makeWASocket({
+    logger: pino({ level: "silent" }),
     auth: state,
     printQRInTerminal: true,
-    logger: pino({ level: "silent" }),
+    generateHighQualityLinkPreview: true,
     browser: Browsers.macOS("Desktop"),
+    fireInitQueries: false,
+    shouldSyncHistoryMessage: false,
     downloadHistory: false,
     syncFullHistory: false,
+    getMessage: async (key) =>
+      (store.loadMessage(key.id) || {}).message || {
+        conversation: null,
+      },
   });
+  store.bind(conn.ev);
+  setInterval(() => {
+    store.writeToFile("./lib/store.json");
+  }, 30 * 1000);
+
+  conn.ev.on("creds.update", saveCreds);
   conn.ev.on("connection.update", async (s) => {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
@@ -40,8 +63,6 @@ async function Abu() {
     }
     if (connection === "open") {
       console.log("Session Restored!✅");
-      config.DATABASE.sync();
-      conn.ev.on("creds.update", saveCreds);
 
        console.log("installing Plugins!✅");
 
@@ -155,15 +176,27 @@ async function Abu() {
         });
       });
     }
-    if (
-      connection === "close" &&
-      lastDisconnect &&
-      lastDisconnect.error &&
-      lastDisconnect.error.output.statusCode != 401
-    ) {
-      Abu();
+    if (connection === "close") {
+      console.log(s);
+      console.log(
+        "Connection closed with bot. Please put New Session ID again."
+      );
+      Alexa().catch((err) => console.log(err));
+    } else {
+      /*
+       */
     }
   });
+  process.on("uncaughtException", async (err) => {
+    let error = err.message;
+    await conn.sendMessage(conn.user.id, { text: error });
+    console.log(err);
+  });
 }
-Abu();
-  
+
+
+
+setTimeout(() => {
+  Alexa();
+}, 3000);
+    
