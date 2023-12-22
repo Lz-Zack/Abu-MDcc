@@ -1,8 +1,8 @@
-const { Module} = require("../lib/");
+const { Module, isPublic } = require("../lib/");
 Module(
   {
     pattern: "ping",
-    fromMe: false,
+    fromMe: isPublic,
     desc: "To check ping",
     type: "user",
   },
