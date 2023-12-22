@@ -90,7 +90,7 @@ async function Alexa() {
       console.log("Plugins Installed!✅");
       let str = `𝙰𝙱𝚄 𝙼𝙳 𝚂𝚃𝙰𝚁𝚃𝙴𝙳 \n𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : ${
         require(__dirname + "/package.json").version
-      }\n𝙿𝙻𝚄𝙶𝙸𝙽𝚂 : ${plugins.commands.length}\n𝙼𝙾𝙳𝙴: ${
+      }\n𝙼𝙾𝙳𝙴: ${
         config.MODE
       }`;
       conn.sendMessage(conn.user.id, { text: str });
