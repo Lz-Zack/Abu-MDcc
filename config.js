@@ -14,7 +14,7 @@ module.exports = {
 
   LOGS: toBool(process.env.LOGS) || true,
 
-  ALIVE_DATA : process.env.ALIVE_DATA || "_iam alive now &sender_",
+  AUDIO_DATA: process.env.AUDIO_DATA || 'Jsl-Jsl;ᴊᴀʀᴠɪꜱ;https://i.imgur.com/ep3UbBP.jpg',
 
   DATABASE: DATABASE_URL === "./lib/database.db" ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: "postgres", ssl: true, protocol: "postgres", dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
 
@@ -35,6 +35,9 @@ module.exports = {
   BGMBOT: process.env.BGMBOT || true,
 
   BRANCH: "master",
+
+    STICKER_PACKNAME: process.env.STICKER_PACKNAME || 'Abu;Md',
+   
 
   ANTIFAKE : process.env.ANTIFAKE || '',
 
